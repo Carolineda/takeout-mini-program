@@ -1,0 +1,33 @@
+<!-- miniprogram/pages/order/order.wxml -->
+<!-- 订单页面 -->
+<view class="order-container">
+  <!-- 没有订单 -->
+  <view class="null" hidden="{{null_order}}">
+    <view class="null-img">
+      <image src="{{nullPic}}" />
+    </view>
+    <view class="brief">最近无订单记录</view>
+  </view>
+  <!-- 订单存在 -->
+  <view class="show_orders">
+    <view class="order_box">
+      <view wx:for="{{orderArr}}" wx:key="index" class="item-order">
+        <view class="shop_name">{{item.orderData[0].store_name}}</view>
+        <view class="message">
+          <view class="left">
+            <image src="{{item.orderData[0].imgUrl}}" />
+          </view>
+          <view class="right">
+            <view>{{item.orderData[0].name}}</view>
+            <view>总价: {{item.totalCost}}</view>
+            <view >下单时间  {{item.time}}</view>
+          </view>
+        </view>
+        <view class="comment-handle">
+          <view class="comment handle-btn" bindtap="toRate"  id="{{item._id}}">评价</view>
+          <view class="reorder handle-btn" bindtap="toReOrder"  id="{{item.shop_id}}">再次预定</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

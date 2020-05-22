@@ -1,0 +1,15 @@
+<!-- 推荐附件商家头部组件部分 -->
+<view class="recommend-tabs">
+  <view class="tab-one tab-item" bindtap="isSort">
+    <van-dropdown-menu class="drown-style">
+      <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+    </van-dropdown-menu>
+  </view>
+  <view class="tab-two tab-item">{{tabTwo}}</view>
+  <view class="tab-three tab-item">{{tabThree}}</view>
+  <view class="tab-four tab-item">
+    {{tabFour}}
+    <image src="../../images/screen.png" style="width:22rpx;height:22rpx;"></image>
+  </view>
+</view>
+<!-- 点击显示面板

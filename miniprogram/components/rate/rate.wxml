@@ -1,0 +1,26 @@
+<!-- components/rate/rate.wxml -->
+<view class="rate">
+  <view class="rate-grade">
+    <view class="point">4.1</view>
+    <view class="busine-rate">
+      <view class="commonStyle">商家评分</view>
+      <van-rate readonly value="{{ value }}" />
+    </view>
+    <view class="smell">
+      <view class="commonStyle">味道</view>
+      <view class="commonStyle">4.1</view>
+    </view>
+    <view class="package">
+      <view class="commonStyle">包装</view>
+      <view class="commonStyle">4.1</view>
+    </view>
+    <view class="send">
+      <view class="commonStyle">配送</view>
+      <view class="commonStyle">4.1</view>
+    </view>
+  </view>
+  <!-- 用户评价部分 -->
+  <view class="user-rate">
+  
+  </view>
+</view>

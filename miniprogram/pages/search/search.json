@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-search": "../../components/vant/search",
+    "recommendHeader": "../../components/recommendHeader/recommendHeader"
+
+  },
+  "navigationBarTitleText": " "
+ 
+
+
+}

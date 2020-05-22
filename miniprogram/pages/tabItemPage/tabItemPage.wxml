@@ -1,0 +1,32 @@
+<!-- 导航栏点击跳转页面 -->
+<view class="tab-navigator">
+  <view class="page_tab">
+    <van-tabs active="{{ active }}" bind:click="onClick">
+      <view wx:for="{{categoryMenu}}" wx:key="index"  id="{{item.id}}">
+        <van-tab title="{{item.menu_title}}" name="{{item.type}}" id="{{item.id}}" data-type="{{type}}">{{storeSetail}}</van-tab>
+      </view>
+    </van-tabs>
+  </view>
+  <!-- 显示商家 -->
+  <view class="store-session">
+    <block wx:for="{{storeDetail}}" wx:key="index">
+      <view class="store-block" bindtap="toStorePage" id="{{item.id}}" data-index="{{index}}">
+        <view class="url-img">
+          <image src="{{item.imgUrl}}" alt="" mode="scaleToFill" />
+        </view>
+        <view class="store-right">
+          <h3 class="store-name">{{item.store_name}}</h3>
+          <view class="rate common-font-style">
+            <van-rate readonly value="{{ item.value }}" allow-half size="13" />
+            <span>月售{{item.mouth_sell}}单</span>
+          </view>
+          <view class="distance common-font-style">
+            <span>￥{{item.minum_deliery}}起送</span>
+            <span class="delivery-count">| 配送{{item.deliery_cost}}元</span>
+          </view>
+          <view class="tag">{{item.tag}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

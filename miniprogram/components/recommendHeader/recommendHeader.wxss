@@ -1,0 +1,36 @@
+/* components/recommendHeader/recommendHeader.wxss */
+.recommend-tabs {
+  margin-top: 30rpx;
+  display: flex;
+  text-align: center;
+  color: #666
+}
+.tab-item {
+  white-space: nowrap;
+  flex:1
+}
+
+/* 显示面板 */
+.shou-down-session {
+  border-top: 1rpx solid  #ddd;
+  background: #fff;
+  height: 40%;
+  z-index: 33;
+}
+.li-style {
+  display: block;
+  height:80rpx;
+  line-height: 60rpx;
+  color: #666;
+  font-size: 1.1rem;
+  margin-left: 20rpx;
+}
+
+/* 引入的“综合排序”下拉组件 */
+.van-dropdown-menu {
+  background-color:transparent;
+  height: 35rpx; 
+}
+.van-dropdown-menu__title {
+  color: #666;
+}

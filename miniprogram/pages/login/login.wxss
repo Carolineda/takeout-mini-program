@@ -1,0 +1,41 @@
+
+
+.headView{
+  margin: 90rpx 50rpx;
+}
+
+
+.headImageView{
+  height: 50px;
+  margin: 25px 25px 0 25px;
+  display: block;
+}
+
+.headImage{
+  display: flex;
+  width: 50px;
+  height: 50px;
+}
+
+.titleText{
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #020e0f;
+  text-align: center;
+}
+
+.contentText{
+  margin: 0 0 0 25px;
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+}
+
+
+.authBtn{
+  margin: 35px 25px 0 25px;
+  height: 45px;
+  font-size: 17px;
+}

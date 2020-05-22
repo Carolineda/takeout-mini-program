@@ -1,0 +1,125 @@
+/* 地址上部分 */
+.confirm-order {
+  height: 100%;
+}
+.address-part {
+  color: #fff;
+  background:#37bbce ;
+  padding: 20rpx;
+}
+.address_detail::after{
+  content: ">";
+  color: #fff;
+  position: absolute;
+  right: 30rpx;
+  /* bottom: 50px; */
+  /* top: 40rpx; */
+}
+.address_detail {
+  padding-right: 40rpx;
+  font-size: 17pt;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.set_height {
+  padding-bottom: 10rpx;
+}
+/* 送达时间 */
+.delivery_time {
+
+  margin: 10rpx;
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  border-radius: 10rpx;
+}
+.time, .pay_method {
+  padding: 30rpx;
+  /* display: inline-flex; */
+  display: flex;
+  justify-content: space-between;
+}
+.right {
+  color: #2395ff;
+}
+
+/* 商家信息 */
+.shop_message {
+  margin: 10rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.goods_msg image{
+  width: 70rpx;
+  height: 70rpx;
+  
+}
+.shop_title {
+  padding: 30rpx;
+}
+.pay_goods {
+  display: flex;
+  justify-content: space-around;
+}
+.good_name {
+  display: inline-block;
+  margin-left: 10rpx;
+  width: 150rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+.inline_show {
+  display: flex;
+  padding: 30rpx;
+  justify-content: space-between;
+  color: #333333;
+}
+.sale {
+  color: #ff4a07;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 结算栏 */
+.pay_money {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  width: 100%;
+  
+}
+.money_display {
+  width: 60%;
+  background: #3c3c3c;
+
+}
+.pay_btn {
+  width: 39%;
+  text-align: center;
+  background: #00e067;
+}

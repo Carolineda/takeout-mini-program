@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-search": "../../components/vant/search"
+
+  },
+  "navigationBarTitleText": "选择收货地址"
+}

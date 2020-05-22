@@ -1,0 +1,12 @@
+/* components/busine/busine.wxss */
+.delivery {
+  background-color: #fff;
+  padding-left: 30rpx;
+}
+.delivery-content, .fontstyle {
+  margin-top: 20rpx;
+  color: #666;
+}
+.busine-serve{
+  margin: 30rpx;
+}

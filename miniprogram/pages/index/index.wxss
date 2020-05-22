@@ -1,0 +1,211 @@
+/* miniprogram/pages/index/index.wxss */
+
+.index-page {
+  overflow-y: auto;
+}
+
+
+/* 用户定位 */
+.location{
+  background: #37bbce;
+  color: white;
+  height: 5vh;
+}
+.location-icon {
+  vertical-align: middle;
+  padding-left: 5rpx;
+}
+.location-address{
+  margin: 0 0 0 5rpx;
+}
+
+/* 搜索框 */
+
+.searchInput-session {
+	background: #37bbce ;
+	height: 8vh;
+	
+}
+.search-wrapper {
+	width: 90%;
+	height: 5vh;
+	line-height: 5vh;
+	background: rgb(245, 234, 234);
+	color: rgb(184, 180, 174);
+	border-radius: 50rpx;
+	display: flex;
+	text-align: center;
+	margin-left: 5%;
+}
+
+.search-icon {
+	vertical-align: middle;
+	padding-left: 100rpx;
+}
+
+
+/* 样式 */
+.van-search__content .van-search__content--square{
+	border-radius: 50%;
+}
+
+
+/* 商品导航列表 */
+.categoryMenu {
+  height: 350rpx;
+}
+.categoryTab {
+  margin-top: 30rpx;
+}
+.category-info {
+  display: inline-block;
+  text-align: center;
+  width: 25%;
+}
+.category-image {
+  width: 100rpx;
+  height:100rpx;
+}
+.category-text {
+  text-align: center;
+  font-size: 14px;
+  color: #696767;
+}
+
+/* 活动秒杀 */
+.activity-session {
+  display: flex;
+  margin: 40rpx;
+  justify-content: space-between;
+}
+
+.content-name {
+  font-size: 13pt;
+  font-weight: 500;
+}
+/* 倒计时 */
+.item {  
+  display: inline-block;
+  width: 22px;
+  margin-right: 5px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  background-color: #37bbce;
+  border-radius: 2px;
+}
+.time-account {
+  color: #37bbce;
+  display: flex;
+}
+.content-img image{
+  width: 300rpx;
+  height:200rpx;
+  border-radius: 10rpx;
+}
+.content-brief {
+  color: #666;
+  font-size: 11pt;
+}
+/* 推荐附近商家 */
+
+    /* 导航栏附近商家 */
+/* components/recommendHeader/recommendHeader.wxss */
+.recommend-tabs {
+  /* margin-top: 30rpx; */
+  display: flex;
+  text-align: center;
+  color: #666
+}
+.tab-item {
+  white-space: nowrap;
+  flex:1
+}
+
+/* 显示面板 */
+.shou-down-session {
+  border-top: 1rpx solid  #ddd;
+  background: #fff;
+  height: 40%;
+  z-index: 33;
+}
+.li-style {
+  display: block;
+  height:80rpx;
+  line-height: 60rpx;
+  color: #666;
+  font-size: 1.1rem;
+  margin-left: 20rpx;
+}
+
+/* 引入的“综合排序”下拉组件 */
+.van-dropdown-menu {
+  background-color:transparent;
+  background-color: #f6f6f6!important;
+  height: 35rpx!important; 
+}
+.van-dropdown-menu__title {
+  color: #666;
+}
+
+.recommend-nearby {
+  margin-top: 40rpx;
+}
+.recommend-title::before{
+  display: block;
+  content: "";
+  margin-right: 20rpx;
+  width: 5.333333vw;
+  height: .266667vw;
+  background-color: #999;
+}
+.recommend-title::after{
+  display: block;
+  content: "";
+  width: 5.333333vw;
+  margin-left: 20rpx;
+  height: .266667vw;
+  background-color: #999;
+}
+.recommend-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 显示商家列表 */
+.store-session {
+  margin-top: 30rpx;
+}
+.store-block {
+  display: flex;
+  padding-left: 30rpx;
+  margin-bottom: 40rpx;
+}
+.url-img image {
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: .533333vw
+}
+.store-right {
+  margin-left: 30rpx;
+}
+.store-name{
+  color: black;
+  font-size: 14pt;
+  font-family: 'Helvetica Neue',Tahoma,Arial,'PingFangSC-Regular','Hiragino San';
+}
+.common-font-style {
+  color: #666666;
+  font-size: 11pt;
+  padding: 10rpx;
+} 
+
+.tag{
+  width: 20vw;
+  border:1rpx solid rgb(221, 221, 221);
+  border-radius: 5rpx;
+  color: #666666;
+  font-size: 11pt;
+  text-align: center;
+}

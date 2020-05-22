@@ -1,0 +1,61 @@
+/* miniprogram/pages/addRate/addRate.wxss */
+.add_rate {
+  height: 100%;
+}
+.shop_img image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+}
+.shop_msg {
+  display: flex;
+  color: #666666;
+  /* border-bottom: 1px solid #ebe9e9; */
+  text-align: center;
+  padding: 30rpx;
+}
+.shop_name {
+  margin-left: 30rpx;
+  margin-top: 50rpx;
+}
+
+/* 商家评论 */
+.rate_part {
+  margin: 30rpx;
+  padding-bottom: 4orpx;
+  background: #FFF;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #666666;
+}
+.tip_contene {
+  font-size: 16pt;
+  padding: 30rpx 0 30rpx 0 ;
+}
+.set-height {
+  margin-bottom: 30rpx;
+}
+.user_remark{
+  text-align: center;
+}
+.user_remark textarea {
+  margin: 20rpx;
+  height: 200rpx;
+  text-align: center;
+  border: 1px solid #b3afaff8;
+}
+/* 提交评价 */
+.rate_btn {
+  color: aliceblue;
+  background: #37bbce;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.commit_rate {
+  text-align: center;
+}

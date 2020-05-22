@@ -1,0 +1,21 @@
+{
+  "usingComponents": {
+    "van-popup": "../../components/vant/popup/index",
+    "van-cell": "../../components/vant/cell/index",
+    "van-tag": "../../components/vant/tag/index",
+    "van-tab": "../../components/vant/tab/index",
+    "van-tabs": "../../components/vant/tabs/index",
+    "van-tree-select": "../../components/vant/tree-select/index",
+    "busine": "../../components/busine/busine",
+    "rate": "../../components/rate/rate",
+    "menu": "../../components/menu/menu",
+    "van-goods-action-icon": "../../components/vant/goods-action-icon/index",
+    "van-rate": "../../components/vant/rate/index" 
+
+
+
+
+
+
+  }
+}

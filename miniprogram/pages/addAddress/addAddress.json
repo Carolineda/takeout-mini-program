@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-area": "../../components/vant/area",
+    "van-popup": "../../components/vant/popup/index",
+    "van-cell": "../../components/vant/cell/index"
+  },
+  "navigationBarTitleText": "添加地址"
+
+}

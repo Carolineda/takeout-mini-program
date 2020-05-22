@@ -1,0 +1,168 @@
+<!-- 推荐附近商家详情页面 -->
+<view class="store-detail">
+  <view class="top-session">
+    <view class="avater-background">
+      <view class="img">
+        <image class="" src="{{imgUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+      </view>
+    </view>
+    <view class="store-name">
+      <h2>{{store_name}}</h2>
+      <view class="store-describe">
+        <span>评价{{value}}</span>
+        <span>月售{{mouth_sell}}</span>
+        <span>蜂鸟快送约20  分钟</span>
+      </view>
+    </view>
+    <view class="store-actity">
+      <van-cell title="店铺优惠" is-link bind:click="showPopup" />
+      <van-popup show="{{ show }}" closeable position="bottom" custom-style="height: 30%" bind:close="onClose">
+        <view class="popup-content">
+          <h2>优惠活动</h2>
+          <view class="tag">
+            <van-tag plain type="danger">满减</van-tag>
+            满50减5元
+            <van-tag plain type="danger">首单</van-tag>
+            饿了么新用户首单立减10元
+          </view>
+        </view>
+      </van-popup>
+      <p class="tips">公告： 欢迎光临，用餐高峰请提前下单，谢谢</p>
+    </view>
+  </view>
+  <!-- 点餐 评价 商家部分  tab标签 -->
+  <!-- <view class="tab-session">
+    <van-tabs sticky active="{{ active }}" bind:change="onChange" animated color="#2395FF">
+      <van-tab title="点餐">
+        <view class="menu" id="menuFunc">
+          <menu></menu>
+        </view>
+      </van-tab>
+      <van-tab title="评价">
+        <rate></rate>
+      </van-tab>
+      <van-tab title="商家">
+        <busine></busine>
+      </van-tab>
+    </van-tabs>
+  </view> -->
+  <view class="tab-session tab">
+    <view class="tab-item">
+      <a class="{{status==0 ? 'active':''}}" bindtap="tabChange" data-type="0">商品</a>
+    </view>
+    <view class="tab-item">
+      <a class="{{status==1 ? 'active':''}}" bindtap="tabChange" data-type="1">评论</a>
+    </view>
+    <view class="tab-item">
+      <a class="{{status==2 ? 'active':''}}" bindtap="tabChange" data-type="2">商家</a>
+    </view>
+  </view>
+  <!-- 菜单部分 -->
+  <view class="goods" wx:if="{{status==0||item.status==status}}">
+    <view class="menu">
+      <view class="goods">
+        <!-- 左边 -->
+        <scroll-view class="category-left" scroll-y="true">
+          <view class="nav_left" wx:for="{{categoryList}}" wx:key="{{item.id}}">
+            <view class="nav_left_items {{curNav == index ? 'active' : ''}}" bindtap="switchTab" data-index="{{index}}" data-id="{{item.id}}">
+              {{item.name}}
+            </view>
+          </view>
+        </scroll-view>
+        <!-- 右边 -->
+        <scroll-view class="category-right" scroll-y="true" scroll-into-view="{{toView}}" scroll-with-animation="true" bindscroll="switchScroll">
+          <block wx:for="{{categoryList}}" wx:key="{{item.id}}" class="li-item" wx:for-index="parentIndex">
+            <view class="list-right" id="{{item.id}}">
+              <view class="click-show">
+                <view class="box-title">{{item.name}}</view>
+                <view class="store-block" wx:for="{{item.categoryRight}}" wx:key="index" wx:for-item="detail">
+                  <view class="url-img">
+                    <image src="{{detail.imgUrl}}" alt="" mode="scaleToFill" />
+                  </view>
+                  <view class="store-right">
+                    <h3 class="store-name">{{detail.store_name}}</h3>
+                    <view class="rate common-font-style">
+                      <view>主要原料{{detail.material}}</view>
+                      <view>月售{{detail.mouth_sell}}单</view>
+                    </view>
+                    <view class="price">￥{{detail.price}}</view>
+                    <!-- 加减操作 -->
+                    <view class="icon">
+                      <view class="decrease" data-item-index="{{index}}" id="{{item.id}}" data-parentIndex="{{parentIndex}}" wx:if="{{detail.count > 0 }}" bindtap="decreaseNum">
+                        <image src="../../images/decrease.png" />
+                      </view>
+                      <view class="goods-num" wx:if="{{detail.count > 0 }}">{{detail.count}}</view>
+                      <view class="add" bindtap="addNum" data-item-index="{{index}}" id="{{item.id}}" data-parentIndex="{{parentIndex}}">
+                        <image src="../../images/add.png" />
+                      </view>
+                    </view>
+                  </view>
+                  
+                </view>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+      <!-- 右边 -->
+      <!-- 购物车 -->
+      <view class="footer">
+        <view class="footer-left">
+          <view class="cart-img" style="background:{{totalCost !=0 ? '#3190e8':'#E7E7E7'}};" bindtap="showCartList">
+            <image src="../../images/trolley.png" style="width:60rpx;height:60rpx;"></image>
+            <view class="dis-num" wx:if="{{totalCountNum > 0 }}">{{totalCountNum}}</view>
+          </view>
+          <view class="cost" wx:if="{{totalCost > 0 }}">￥{{totalCost}}</view>
+          <view class="free"></view>
+        </view>
+        <view class="footer-right" id="menuFunc" style="background:{{totalCost !=0 ? '#38CA73':'#535356'}};" bindtap="toPay">
+          {{totalCost !=0 ? payDesc: minum_deliery + '起送'}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 评论 -->
+  <view class="comments" wx:if="{{status==1||item.status==status}}">
+    <view class="rate">
+      <view class="rate-grade">
+        <view class="point">{{value}}</view>
+        <view class="busine-rate">
+          <view class="commonStyle">商家评分</view>
+          <van-rate readonly value="{{ value }}" />
+        </view>
+        <view class="smell">
+          <view class="commonStyle">味道</view>
+          <view class="commonStyle">{{taste_value}}</view>
+        </view>
+        <view class="package">
+          <view class="commonStyle">包装</view>
+          <view class="commonStyle">{{package_value}}</view>
+        </view>
+        <view class="send">
+          <view class="commonStyle">配送</view>
+          <view class="commonStyle">{{delivery_value}}</view>
+        </view>
+      </view>
+      <!-- 用户评价部分 -->
+      <view class="user-rate"></view>
+    </view>
+  </view>
+  <!-- 商家 -->
+  <view class="shop" wx:if="{{status==2||item.status==status}}">
+    <view class="busine">
+      <view class="delivery">
+        <h3>配送信息</h3>
+        <view class="delivery-content fontstyle">
+          <p>由蜂鸟快送提供配送，约41分钟送达，距离2.4km</p>
+          <p>配送费</p>
+        </view>
+      </view>
+      <view class="busine-serve">
+        <h3>商家服务</h3>
+        <view class="fontstyle">
+          <p>该商户已购买食品安全责任险，食品安全有保障</p>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

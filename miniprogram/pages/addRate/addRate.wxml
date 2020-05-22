@@ -1,0 +1,32 @@
+<!-- 用户提交评价 -->
+<view class="add_rate">
+  <view class="shop_msg">
+    <view class="shop_img">
+      <image src="{{getSelectRateData[0].orderData[0].imgUrl}}" />
+      <!-- <image src="https://cube.elemecdn.com/1/fd/813b33dd1eb10a7ba248d83f0695epng.png?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed" /> -->
+    </view>
+    <view class="shop_name">{{getSelectRateData[0].orderData[0].store_name}}</view>
+    <!-- <view class="shop_name">书亦烧仙草</view> -->
+  </view>
+  <!-- 商家评论部分 -->
+  <view class="rate_part">
+    <view class="tip_contene">这次用餐体验满意吗？</view>
+    <view class="total_value set-height">
+      <van-rate value="{{ value }}" bind:change="onChange" size="25" />
+    </view>
+    <view class="taste_value set-height">
+      味道  <van-rate value="{{ tasteValue }}"  bind:change="tasteChange"   />
+    </view>
+    <view class="taste_value set-height">
+      包装  <van-rate value="{{ packageValue }}"   bind:change="packageChange"  />
+    </view>
+    <view class="user_remark">
+        <textarea placeholder="说说哪里好？其他顾客想知道" bindinput="getTextValue" auto-focus />
+    </view>
+  </view>
+
+  <!-- 提交评价 -->
+  <view class="rate_btn">
+    <view class="commit_rate" bindtap="commitRate">提交评价</view>
+  </view>
+</view>

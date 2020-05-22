@@ -1,0 +1,122 @@
+/* miniprogram/pages/search/search.wxss */
+
+/* 搜索部分 */
+.search-wrapper {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+}
+.search-session {
+  display: flex;
+  padding: 30rpx 0 20rpx 0;
+  justify-content: space-around;
+  color: #666;
+
+}
+.input-style {
+  background-color: #f8f8f8;
+  color: #666;
+  height: 80rpx;
+  padding-left: 20rpx;
+  border-radius: 10rpx;
+
+}
+.searchInput {
+  width: 70%;
+}
+
+/* 历史搜索 */
+.search-history.hidden{
+  display: none;
+}
+.history-record {
+  padding: 30rpx;
+}
+.record-title {
+  color: #666666;
+  font-weight: 700;
+}
+.item-content{
+  display: flex;
+  
+  font-size: 28rpx;
+  margin-top: 30rpx;
+}
+.record-item {
+  /* margin: 40rpx; */
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-right: 40rpx;
+  color: #666;
+  background-color: #f7f7f7;
+  width:100rpx;
+  border-radius: 5rpx;
+}
+
+
+
+/* 搜索成功显示商家 */
+
+/* 推荐附近商家 */
+.recommend-nearby {
+  /* margin-top: 40rpx; */
+}
+.recommend-title::before{
+  display: block;
+  content: "";
+  margin-right: 20rpx;
+  width: 5.333333vw;
+  height: .266667vw;
+  background-color: #999;
+}
+.recommend-title::after{
+  display: block;
+  content: "";
+  width: 5.333333vw;
+  margin-left: 20rpx;
+  height: .266667vw;
+  background-color: #999;
+}
+.recommend-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 显示商家列表 */
+.store-session {
+  margin-top: 30rpx;
+}
+.store-block {
+  display: flex;
+  padding-left: 30rpx;
+  margin-bottom: 40rpx;
+}
+.url-img image {
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: .533333vw
+}
+.store-right {
+  margin-left: 30rpx;
+}
+.store-name{
+  color: black;
+  font-size: 14pt;
+  font-family: 'Helvetica Neue',Tahoma,Arial,'PingFangSC-Regular','Hiragino San';
+}
+.common-font-style {
+  color: #666666;
+  font-size: 11pt;
+  padding: 10rpx;
+} 
+
+.tag{
+  width: 20vw;
+  border:1rpx solid rgb(221, 221, 221);
+  border-radius: 5rpx;
+  color: #666666;
+  font-size: 11pt;
+  text-align: center;
+}

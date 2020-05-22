@@ -1,0 +1,41 @@
+<!-- 新增收货地址页面 -->
+<!-- 信息部分开始 -->
+<form bindsubmit="formSubmit" report-submit="true">
+  <view class="info">
+    <!-- 姓名部分 -->
+    <view class="item">
+      <text>联系人</text>
+      <view class="right">
+        <input type="text" name="name" placeholder="" focus="{{focus}}" />
+      </view>
+    </view>
+    <!-- 电话部分 -->
+    <view class="item">
+      <text>联系电话</text>
+      <view class="right">
+        <input name="tel" type="number" placeholder="" focus="{{focus}}" />
+      </view>
+    </view>
+    <!-- 收货地址部分 -->
+    <view class="address_select" bindtap="getAddress">
+      <view>
+        <van-cell title="地址" is-link bind:click="showPopup" class="select_left" />
+      </view>
+      <view class="detail_city">
+       {{cityInfo}}
+      </view>
+      <van-popup show="{{ show }}" position="bottom" custom-style="height: 50%" bind:close="onClose">
+        <van-area area-list="{{ areaList }}" bind:confirm="clickConfirm" />
+      </van-popup>
+    </view>
+    <!-- 详细地址部分 -->
+    <view class="item">
+      <text>详细地址</text>
+      <view class="right">
+        <input name="detail_address" type="text" placeholder="{{door}}" focus="{{focus}}" />
+      </view>
+    </view>
+  </view>
+  <!-- 信息部分结束 -->
+  <button class="save" formType="submit">保存</button>
+</form>

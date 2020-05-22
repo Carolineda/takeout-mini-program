@@ -1,0 +1,30 @@
+<!-- 选择收货地址 -->
+<view class="select-address">
+  <view class="top">
+    <van-search value="{{ value }}" placeholder="请输入地址" />
+  </view>
+  <view class="brief">当前地址</view>
+  <view class="now-location">
+    <view class="loca-msg">{{address}}</view>
+    <view class="re-loca" bindtap="relocation">重新定位</view>
+  </view>
+  <view class="brief">收货地址</view>
+  <view class="receive-address">
+    <view class="address-items" wx:for="{{addressData}}" wx:key="index" id="{{item._id}}" bindtap="clickItemAddress">
+      <view class="user-msg">
+        <p>{{item.name}}</p>
+        <span class="user-phone">{{item.tel}}</span>
+      </view>
+      <view class="user-location">
+        {{item.cityInfo+item.detail_address}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 添加收货地址 -->
+   <view class="add_address_btn add" bindtap="ToaddAddress">
+    <image class="left" src="../../images/add.png" mode="widthFix" />
+    <view class="text">新增个人地址</view>
+    <image class="right" src="../../images/right.png" mode="widthFix" />
+  </view>
+</view>

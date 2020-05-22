@@ -1,0 +1,18 @@
+<!-- components/busine/busine.wxml -->
+<!-- 商家部分 -->
+<view class="busine">
+  <view class="delivery">
+    <h3>配送信息</h3>
+    <view class="delivery-content fontstyle">
+      <p>由蜂鸟快送提供配送，约41分钟送达，距离2.4km</p>
+      <p>配送费</p>
+    </view>
+  </view>
+
+  <view class="busine-serve">
+    <h3>商家服务</h3>
+    <view class="fontstyle">
+      <p>该商户已购买食品安全责任险，食品安全有保障</p>
+    </view>
+  </view>
+</view>

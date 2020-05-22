@@ -1,0 +1,53 @@
+<view class="confirm-order">
+  <view class="address-part" bindtap="sellectAddress">
+    <view class="title set_height">订单配送至</view>
+    <view class="address_detail set_height">{{address}}</view>
+    <h2 class="set_height">
+      <!-- <span>高</span> -->
+      <span>{{name}}</span>
+      <span>{{phone_num}}</span>
+    </h2>
+  </view>
+  <!-- 送达时间 -->
+  <view class="delivery_time">
+    <view class="time">
+      <view class="left">送达时间</view>
+      <view class="right">尽快送达 {{get_time}}</view>
+    </view>
+    <view class="pay_method">
+      <view class="left">支付方式</view>
+      <view class="right">在线支付</view>
+    </view>
+  </view>
+  <!-- 商家信息 -->
+  <view class="shop_message">
+    <view class="shop_title">{{shop_name}}</view>
+    <view class="pay_goods inline_show" wx:for="{{selectGoods}}" wx:key="index">
+   
+      <view class="common_one goods_msg">
+        <image src="{{item.goodImg}}" />
+        <span  class="good_name">{{item.name}}</span>
+      </view>
+      <view class="num_show">x{{item.num}}</view>
+      <view class="common_two">￥{{item.num*item.price}}</view>
+  
+    </view>
+    <view class="package_count inline_show">
+      <view class="common_one">包装费</view>
+      <view class="common_two">￥{{package_cost}}</view>
+    </view>
+    <view class="delivery_money inline_show">
+      <view class="common_one">配送费</view>
+      <view class="common_two">￥{{delivery}}</view>
+    </view>
+    <view class="shop_activity inline_show">
+      <view class="common_one">店铺满减活动</view>
+      <view class="common_two sale">-￥{{money > 50 ? sale:0}}</view>
+    </view>
+  </view>
+  <!-- 结算栏 -->
+  <view class="pay_money">
+    <view class="money_display">￥ {{money}}</view>
+    <view class="pay_btn" bindtap="gotoPay">去支付</view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-goods-action-icon": "../vant/goods-action-icon/index"
+  }
+}

@@ -1,0 +1,97 @@
+<!-- 首页 页面 -->
+<view class="index-page">
+  <!-- 首页搜索框 头部组件部分 -->
+  <!-- 用户定位 -->
+  <view class="location" bindtap="toSelectAdress">
+    <van-icon class="location-icon" name="location-o" color="white" />
+    <text class="location-address">{{address}}</text>
+  </view>
+  <!-- 搜索框组件 -->
+  <!-- <searchInput ></searchInput> -->
+  <view class="searchInput-session" bindtap="toSearch">
+    <van-search value="{{ value }}" placeholder="搜索商家、商品名称" background="#37bbce" />
+  </view>
+  <!-- 导航列表 -->
+  <view class="categoryTab">
+    <block wx:for="{{categoryMenu}}" wx:key="index">
+      <navigator class="category-info" url="../tabItemPage/tabItemPage?type={{item.type}}">
+        <view>
+          <image src="{{item.img}}" class="category-image"></image>
+          <view class="category-text">{{item.menu_title}}</view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <!-- 活动秒杀 -->
+  <view class="activity-session">
+    <view class="session-content" bindtap="toSeckill">
+      <view class="content-name">限时秒杀</view>
+      <view class="time-account">
+       <view class="tme-brief">
+         距本场结束 
+         <!-- {{day}}天 <text>{{hou}}</text>：<text>{{min}}</text>：<text>{{sec}}</text> -->
+       </view> 
+       <view class="time-show">
+         <van-count-down use-slot time="{{ time }}" bind:change="onChange">
+          <text class="item">{{ timeData.hours }}</text>:
+          <text class="item">{{ timeData.minutes }}</text>:
+          <text class="item">{{ timeData.seconds }}</text>
+        </van-count-down>
+       </view>
+        
+      </view>
+      <view class="content-img">
+        <image src="https://cube.elemecdn.com/3/57/9aae085fc1d57410ede4316433235jpeg.jpeg?x-oss-process=image/format,webp/resize,w_218,h_218,m_fixed" />
+      </view>
+    </view>
+    <view class="session-content-right">
+      <view class="content-name">大牌特惠</view>
+      <view class="content-brief">解锁高分美食</view>
+      <view class="content-img">
+        <image src="https://cube.elemecdn.com/e/2e/3e204656d3b6abf90ee02612c45c3jpeg.jpeg?x-oss-process=image/resize,m_lfit,w_210,h_210/watermark,g_se,x_4,y_4,image_YS8xYS82OGRlYzVjYTE0YjU1ZjJlZmFhYmIxMjM4Y2ZkZXBuZy5wbmc_eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsUF8yOA%3D%3D/quality,q_90/format,webp" />
+      </view>
+    </view>
+  </view>
+  <!-- 附近商家推荐 -->
+  <view class="recommend-nearby">
+    <view class="recommend-title">推荐商家</view>
+    <div class="recommend-content">
+      <!-- 商家tab -->
+      <view class="recommend-tabs">
+        <view class="tab-one tab-item" bindtap="isSort">
+          <van-dropdown-menu class="drown-style">
+            <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="clickCondition" />
+          </van-dropdown-menu>
+        </view>
+        <view class="tab-two tab-item">{{tabTwo}}</view>
+        <view class="tab-three tab-item">{{tabThree}}</view>
+        <view class="tab-four tab-item">
+          {{tabFour}}
+          <image src="../../images/screen.png" style="width:22rpx;height:22rpx;"></image>
+        </view>
+      </view>
+    </div>
+  </view>
+  <!-- 显示附近商家 -->
+  <view class="store-session">
+    <block wx:for="{{storeDetail}}" wx:key="index">
+      <view class="store-block" bindtap="toStoreDetail" id="{{item.id}}" data-index="{{index}}">
+        <view class="url-img">
+          <image src="{{item.imgUrl}}" alt="" mode="scaleToFill" />
+        </view>
+        <view class="store-right">
+          <h3 class="store-name">{{item.store_name}}</h3>
+          <view class="rate common-font-style">
+            <van-rate readonly value="{{ item.value }}" allow-half size="13" />
+            <span>月售{{item.mouth_sell}}单</span>
+          </view>
+          <view class="distance common-font-style">
+            <span>￥{{item.minum_deliery}}起送</span>
+            <span class="delivery-count">| 配送{{item.deliery_cost}}元</span>
+          </view>
+          <view class="tag">{{item.tag}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

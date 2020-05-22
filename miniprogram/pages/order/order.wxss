@@ -1,0 +1,63 @@
+/* miniprogram/pages/order/order.wxss */
+/* 订单为空 */
+
+.null-img {
+  margin-top: 100rpx;
+  text-align: center;
+}
+.null-img image{
+  width: 300rpx;
+  height: 300rpx;
+}
+.brief{
+  text-align: center;
+  color: #6a6a6a;
+}
+
+
+/* 订单存在 */
+.show_orders {
+  border-top: 1px solid #000;
+}
+.message .left image{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+}
+.item-order {
+  margin: 16rpx;
+  border-radius: 20rpx;
+  background: #fff;
+}
+.shop_name {
+  color: rgb(80, 78, 78);
+  padding: 20rpx 0 20rpx 20rpx;
+}
+.message {
+  display: flex;
+  padding: 20rpx;
+  border-top: 1px solid rgba(212, 211, 211,0.3);
+}
+.right {
+  margin-left: 40rpx;
+  color: #666666;
+  font-size: 11pt;
+}
+
+.comment-handle {
+  display: flex;
+  color: #666666;
+  position: relative;
+  right: -330rpx;
+  bottom: 40rpx;
+}
+.handle-btn {
+  text-align: center;
+  font-size: 11pt;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 150rpx;
+  border-radius: 20rpx;
+  border: 1px solid rgb(212, 211, 211);
+  margin-right: 20rpx;
+}

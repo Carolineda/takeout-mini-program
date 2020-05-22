@@ -1,0 +1,38 @@
+/* miniprogram/pages/tabItemPage/tabItemPage.wxss */
+
+/* 显示商家列表 */
+.store-session {
+  margin-top: 30rpx;
+}
+.store-block {
+  display: flex;
+  padding-left: 30rpx;
+  margin-bottom: 40rpx;
+}
+.url-img image {
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: .533333vw
+}
+.store-right {
+  margin-left: 30rpx;
+}
+.store-name{
+  color: black;
+  font-size: 14pt;
+  font-family: 'Helvetica Neue',Tahoma,Arial,'PingFangSC-Regular','Hiragino San';
+}
+.common-font-style {
+  color: #666666;
+  font-size: 11pt;
+  padding: 10rpx;
+} 
+
+.tag{
+  width: 20vw;
+  border:1rpx solid rgb(221, 221, 221);
+  border-radius: 5rpx;
+  color: #666666;
+  font-size: 11pt;
+  text-align: center;
+}

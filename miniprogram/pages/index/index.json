@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    
+    "van-icon": "../../components/vant/icon",
+    "van-rate": "../../components/vant/rate/index",
+    "van-search": "../../components/vant/search",
+    "van-dropdown-menu": "../../components/vant/dropdown-menu",
+    "van-dropdown-item": "../../components/vant/dropdown-item",
+    "van-count-down": "../../components/vant/count-down/index"
+
+
+    
+  }
+  
+}

@@ -1,0 +1,72 @@
+/* miniprogram/pages/selectAdress/selectAdress.wxss */
+.top {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+
+}
+.addAddress {
+  align-items: center;
+  vertical-align: middle;
+  color: #666;
+  width: 40%;
+  padding-top: 30rpx;
+  margin-left: 30rpx;
+}
+.brief {
+  color: #666;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 30rpx;
+}
+.now-location {
+  background: #fff;
+  display: flex;
+  padding: 30rpx;
+  justify-content: space-between;
+}
+.re-loca{
+  color: #2395ff;
+}
+
+/* 历史收货地址 */
+.address-items {
+  background: #fff;
+  color: #333;
+  padding: 30rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+.user-phone {
+  padding-left: 20rpx;
+}
+.user-location {
+  padding-top: 10rpx;
+}
+/* 新增收货地址 */
+.add{
+  width:100%;  
+  background-color:#fff;
+  position: absolute;
+  bottom: 0;
+  padding:15rpx 15rpx 30rpx 40rpx;
+  border-top:1rpx solid #e0e0e0;
+}
+.add image{
+  width:50rpx;
+  margin-top:15rpx;
+  margin-right:20rpx;
+}
+.add .right{
+  width:25rpx;
+  float:right;
+  margin-right:60rpx;
+  padding-top:15rpx;
+  color:#e0e0e0;
+}
+.text{
+  float:left;
+  margin-top:20rpx;
+}
+.left{
+  float:left;
+}
